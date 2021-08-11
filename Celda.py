@@ -7,3 +7,7 @@ class Celda:
         if self.barco != None:
             return True
         return False
+
+    def barco_agregado(self):
+        self.barco = True
+        

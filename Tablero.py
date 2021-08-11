@@ -16,4 +16,5 @@ class Tablero:
         return resultado
     
     def poner_barcos(self):
-    
+        barco = self.celdas[x][y].barco_agregado()
+        
