@@ -1,0 +1,9 @@
+class Celda:
+    def __init__(self):
+        self.barco = None
+        self.atacada = False
+    
+    def ser_atacado(self):
+        if self.barco != None:
+            return True
+        return False
