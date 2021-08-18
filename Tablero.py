@@ -1,4 +1,5 @@
 from Celda import Celda
+from random import randrange
 import random
 
 class Tablero:
@@ -22,6 +23,7 @@ class Tablero:
     
     def poner_barcos(self, x, y):
         barco = self.celdas[x][y].barco_agregado()
+        return barco
 
     def limpiar_tablero(self):
         for num_fila in range(self.tamanio):
@@ -31,3 +33,8 @@ class Tablero:
     def borrar_barcos(self, x, y):
         barco = self.celdas[x][y].remover_barcos()
         
+    def barcos_aleatorios(self):
+        randX = randrange(self.tamanio)
+        randY = randrange(self.tamanio)
+        for i in range(8):
+            self.celdas[randX][randY].barco_agregado()
