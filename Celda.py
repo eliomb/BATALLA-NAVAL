@@ -10,6 +10,7 @@ class Celda:
 
     def barco_agregado(self):
         self.barco = True
+        print("puso el barco en true")
     
     def remover_barco(self):
         self.barco = False
