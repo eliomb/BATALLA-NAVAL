@@ -10,4 +10,7 @@ class Celda:
 
     def barco_agregado(self):
         self.barco = True
+    
+    def remover_barco(self):
+        self.barco = False
         
