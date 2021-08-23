@@ -1,17 +1,23 @@
+from Barco import Barco
+
 class Celda:
     def __init__(self):
-        self.barco = None
-        self.atacada = False
-    
+        self.barco = Barco()
+        self.atacada = None
+        self.ocupado = None
+
     def ser_atacado(self):
-        if self.barco != None:
+        #print("Posicion atacada!")
+        print("ANTES ", self.ocupado)
+        if self.ocupado == True:
+            self.ocupado = False
+            print("DESPUES ", self.ocupado)
             return True
-        return False
 
     def barco_agregado(self):
-        self.barco = True
-        print("puso el barco en true")
+        self.ocupado = True
+        #print("Se coloco un barco")
     
     def remover_barco(self):
-        self.barco = False
+        self.ocupado = False
         
