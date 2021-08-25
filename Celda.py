@@ -13,9 +13,11 @@ class Celda:
             self.ocupado = False
             print("DESPUES ", self.ocupado)
             return True
+        else:
+            return False
 
-    def barco_agregado(self):
-        self.ocupado = True
+    #def barco_agregado(self):
+     #   self.ocupado = True
         #print("Se coloco un barco")
     
     def remover_barco(self):

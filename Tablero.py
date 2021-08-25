@@ -21,7 +21,6 @@ class Tablero:
             print(self.celdas[i])
         #pr
 
-  
     
     def disparar(self, x, y):
         print("----- EMPIEZA ATAQUE -----")
@@ -29,7 +28,8 @@ class Tablero:
         return resultado
     
     def poner_barcos(self, x, y):
-        barco = self.celdas[x][y].barco_agregado()
+        #barco = self.celdas[x][y].barco_agregado()
+        self.celdas[x][y].ocupado = True
         print(self.celdas[x][y].ocupado)
 
 
@@ -51,7 +51,7 @@ class Tablero:
         numY = None
 
         print("Colocando OCHO barcos...")
-        for i in range(8):
+        for i in range(1, 8):
             randX = randrange(1, self.tamanio)
             randY = randrange(1, self.tamanio)
             if numY == randY or numX == randX:

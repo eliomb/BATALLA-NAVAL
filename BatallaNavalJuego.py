@@ -17,11 +17,11 @@ class Juego:
                     print("Hundiste a un barco!")
                     print("----- TERMINA ATAQUE -----")
                     self.barcos_hundidos += 1
-                    ataque == None
+                    ataque = None
                 else:
                     print("le pifeaste")
                     print("----- TERMINA ATAQUE -----")
-                    ataque == None
+                    ataque = None
             else:
                 print("ERROR: Los barcos no se generaron")
         
