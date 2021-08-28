@@ -35,7 +35,10 @@ class Tablero:
         print("x:%i,y:%i:"%(x,y))
         print(self.celdas[x][y].ocupado)
 
-
+    def celdaocupada(self, x, y):
+        celda = self.celdas[x][y].ocupado
+        if celda == True:
+            return celda
 
     def limpiar_tablero(self):
         for num_fila in range(self.tamanio):

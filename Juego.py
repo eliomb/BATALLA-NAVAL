@@ -1,4 +1,5 @@
 from Tablero import Tablero
+from Celda import Celda
 
 class Juego:
     def __init__(self):
@@ -22,6 +23,11 @@ class Juego:
                 x = int(input("Dame un x: "))
                 y = int(input("Dame un y: "))
                 while self.bar == False:
+                    if self.TuTablero.celdaocupada(x, y) == True:
+                        print("El casillero ya esta ocupado.")
+                        x = int(input("Dame un x: "))
+                        y = int(input("Dame un y: "))
+                        self.bar = False
                     if x < 0 or x > 8 or y < 0 or y > 8:
                         print("Valores invalidos, las coordenadas son de 8x8!!!")
                         x = int(input("Dame un x: "))
@@ -32,6 +38,7 @@ class Juego:
                     
                 self.TuTablero.poner_barcos(x, y)
                 print(i)
+            
             self.generados = True
 
         
