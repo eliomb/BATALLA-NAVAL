@@ -20,8 +20,8 @@ class Tablero:
                 self.celdas[num_fila].append(Celda())
 
 
-        for i in range(1,8):
-            print(self.celdas[i])
+        #for i in range(1,8):
+            #print(self.celdas[i])
         #pr
 
     
@@ -32,13 +32,15 @@ class Tablero:
     
     def poner_barcos(self, x, y):
         barco = self.celdas[x][y].barco_agregado()
-        print("x:%i,y:%i:"%(x,y))
-        print(self.celdas[x][y].ocupado)
+#        print("x:%i,y:%i:"%(x,y))
+#        print(self.celdas[x][y].ocupado)
 
     def celdaocupada(self, x, y):
         celda = self.celdas[x][y].ocupado
         if celda == True:
             return celda
+        else:
+            return False
 
     def limpiar_tablero(self):
         for num_fila in range(self.tamanio):
@@ -53,8 +55,6 @@ class Tablero:
         
     def barcos_aleatorios(self):
         generados = False
-        numX = None
-        numY = None
 
 
         #print("Colocando OCHO barcos...")
@@ -64,7 +64,7 @@ class Tablero:
             randY = randrange(self.tamanio)
 
             if (randX, randY) in self.lista_barcos:
-                break
+                continue
             
             self.poner_barcos(randX, randY)
             self.lista_barcos.append((randX,randY))
@@ -79,4 +79,3 @@ class Tablero:
         if generados != True:
             generados = True
             return generados
-        
